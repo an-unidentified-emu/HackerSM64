@@ -1152,6 +1152,7 @@ void init_reverb_us(s32 presetId) {
 
 
 #if defined(VERSION_JP) || defined(VERSION_US)
+
 void audio_reset_session(s32 reverbPresetId) {
     if (sAudioIsInitialized) {
         if (gAudioLoadLock != AUDIO_LOCK_UNINITIALIZED) {
@@ -1164,6 +1165,7 @@ void audio_reset_session(s32 reverbPresetId) {
                 }
             }
 
+
             for (s32 i = 0; i < gMaxSimultaneousNotes; i++) {
                 gNotes[i].enabled = FALSE;
             }
@@ -1174,7 +1176,9 @@ void audio_reset_session(s32 reverbPresetId) {
             temporary_pool_clear( &gBankLoadedPool.temporary);
             reset_bank_and_seq_load_status();
 
+
             init_reverb_us(reverbPresetId);
+
             bzero(&gAiBuffers[0][0], (AIBUFFER_LEN * NUMAIBUFFERS));
 
             if (gAudioLoadLock != AUDIO_LOCK_UNINITIALIZED) {

@@ -108,6 +108,7 @@
  */
 #define HANGING_FIX
 
+
 /**
  * The maximum angle the player can wall kick, in degrees. 0..90. To allow 45 degree wall kicks, you must supply `46` to allow 45 and under.
  */
@@ -116,6 +117,7 @@
 /**
  * Makes Mario unable to ledge grab steep slopes to prevent false ledge grabs.
  */
+
 #define DONT_LEDGE_GRAB_STEEP_SLOPES
 
 /**

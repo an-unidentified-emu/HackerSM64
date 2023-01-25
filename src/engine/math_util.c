@@ -590,7 +590,9 @@ void mtxf_billboard(Mat4 dest, Mat4 mtx, Vec3f position, Vec3f scale, s16 angle)
  * 'scale' is the scale of the shadow
  * 'yaw' is the angle which it should face
  */
+
 void mtxf_shadow(Mat4 dest, Vec3f upDir, Vec3f pos, Vec3f scale, s16 yaw) {
+
     Vec3f lateralDir;
     Vec3f leftDir;
     Vec3f forwardDir;
